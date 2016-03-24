@@ -7,6 +7,7 @@ var svgSprite = require('gulp-svg-sprite');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var minify = require('gulp-minify');
+var babel = require("gulp-babel");
 var tingpng = require('gulp-tinypng');
 var browserSync = require('browser-sync');
 var dist = {
@@ -67,6 +68,7 @@ gulp.task('scripts', function() {
   return gulp.src('./src/js/scripts.js')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sourcemaps.init())
+      .pipe(babel())
       .pipe(concat('scripts.js'))
       .pipe(minify())
     .pipe(sourcemaps.write(dist.jsmaps))
@@ -107,7 +109,7 @@ gulp.task('copyTask', function() {
 
 // Browsersync task - Static server
 gulp.task('serve', function() {
-    browserSync.init(['css/*.css', 'js/*.js', '**/*.html'], {
+    browserSync.init(['css/*.css', 'js/*.js', '*.html'], {
         server: {
             baseDir: "./"
         }

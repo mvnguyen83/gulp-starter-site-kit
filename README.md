@@ -38,6 +38,11 @@ Drop any svg into the `/src/svg` folder. The name of the svg will become the id 
 * `/src/scripts.js` -> `/js/scripts.js` -- Minified
 
 ## Changelog
+### Version 5.2
++ Added Gulp Babel Plugin with ES2015
+    + http://babeljs.io/docs/setup/#gulp
++ Fixed %centerVertAll in _format.scss
+
 ### Version 5.1
 + Added Gulp Plugins
     + browser-sync : https://www.browsersync.io/docs/gulp/

@@ -82,7 +82,7 @@ p, ul {
   }
 }
 %centerVertLarge, .center-vert-large {
-  @include breakFirst(large){
+  @include breakFirst(large) {
     @include center();
   }
   .no-csstransforms & {
@@ -91,7 +91,7 @@ p, ul {
     left: 0;
   }
 }
-%centerVertAll, .center-vert-all 
+%centerVertAll, .center-vert-all {
   @include center();
   .no-csstransforms & {
     position: relative;
