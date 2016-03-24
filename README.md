@@ -8,19 +8,20 @@ Skeleton with responsive breakpoints, using a modified Twitter Bootstrap grid an
 + Gulp
 
 ## Install using NPM
-Note: Update to the latest Node.js and npm
+Note: Update to the latest Node.js and npm first
 
 ```bash
 $ npm install
 ```
 
 ## Process javascript, sass and any gulp tasks
+Note: Update to the latest gulp first: sudo npm update gulp -g
 
 ```bash
 $ gulp
 ```
 
-## Watch javascript, sass and any gulp tasks
+## Watch javascript, sass, browsersync, and any gulp tasks
 
 ```bash
 $ gulp watch
@@ -39,9 +40,11 @@ Drop any svg into the `/src/svg` folder. The name of the svg will become the id 
 
 ## Changelog
 ### Version 5.2
-+ Added Gulp Babel Plugin with ES2015
-    + http://babeljs.io/docs/setup/#gulp
++ Added Gulp Plugins
+    + babel for js legacy js: http://babeljs.io/docs/setup/#gulp
+    + cached for tingpng: https://www.npmjs.com/package/gulp-cached
 + Fixed %centerVertAll in _format.scss
++ Refactored gulpfile with babel
 
 ### Version 5.1
 + Added Gulp Plugins
